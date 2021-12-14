@@ -1,0 +1,6 @@
+language: c
+compiler: gcc
+script:
+  - make
+  - make test
+  - git ls-file scr/ xargs clang-format -i && git diff --exit-code
